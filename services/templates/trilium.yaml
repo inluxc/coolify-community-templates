@@ -1,0 +1,14 @@
+templateVersion: 1.0.0
+defaultVersion: 0.56.2
+type: trilium
+name: Trilium Notes
+services:
+  $$id:
+    image: zadam/trilium:$$core_version
+    environment: []
+    volumes:
+      - $$id-trilium:/home/node/trilium-data
+    ports:
+      - '8080'
+variables: []
+documentation: https://hub.docker.com/r/zadam/trilium

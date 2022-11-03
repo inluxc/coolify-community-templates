@@ -1,0 +1,64 @@
+templateVersion: 1.0.0
+defaultVersion: '5.22'
+type: ghost-only
+name: Ghost Only (No Database)
+description: >-
+  Ghost is a free and open source blogging platform written in JavaScript and
+  distributed under the MIT License
+services:
+  $$id:
+    name: Ghost
+    documentation: Taken from https://docs.ghost.org/
+    image: ghost:$$core_version
+    volumes:
+      - $$id-ghost:/var/lib/ghost/content
+    environment:
+      - url=$$config_url
+      - database__client=$$config_database__client
+      - database__connection__host=$$config_database__connection__host
+      - database__connection__user=$$config_database__connection__user
+      - database__connection__password=$$secret_database__connection__password
+      - database__connection__database=$$config_database__connection__database
+    ports:
+      - '2368'
+variables:
+  - id: $$config_url
+    name: url
+    label: URL
+    defaultValue: $$generate_fqdn
+    description: ''
+  - id: $$config_database__client
+    name: database__client
+    label: Database Client
+    defaultValue: mysql
+    description: ''
+    required: true
+  - id: $$config_database__connection__host
+    name: database__connection__host
+    label: Database Host
+    defaultValue: ''
+    description: ''
+    required: true
+    placeholder: db.coolify.io
+  - id: $$config_database__connection__user
+    name: database__connection__user
+    label: Database User
+    defaultValue: ''
+    description: ''
+    placeholder: ghost
+    required: true
+  - id: $$secret_database__connection__password
+    name: database__connection__password
+    label: Database Password
+    defaultValue: ''
+    description: ''
+    placeholder: superSecretP4ssword
+    showOnConfiguration: true
+    required: true
+  - id: $$config_database__connection__database
+    name: database__connection__database
+    label: Database Name
+    defaultValue: ''
+    description: ''
+    placeholder: ghost_db
+    required: true

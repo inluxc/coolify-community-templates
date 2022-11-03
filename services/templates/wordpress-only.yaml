@@ -1,0 +1,69 @@
+templateVersion: 1.0.0
+defaultVersion: php8.1
+type: wordpress-only
+name: WordPress Only (No Database)
+description: WordPress is a content management system based on PHP without MySQL.
+services:
+  $$id:
+    name: WordPress
+    documentation: Taken from https://docs.docker.com/compose/wordpress/
+    image: wordpress:$$core_version
+    volumes:
+      - $$id-wordpress-data:/var/www/html
+    environment:
+      - WORDPRESS_DB_HOST=$$config_wordpress_db_host
+      - WORDPRESS_DB_PORT=$$config_wordpress_db_port
+      - WORDPRESS_DB_USER=$$config_wordpress_db_user
+      - WORDPRESS_DB_PASSWORD=$$secret_wordpress_db_password
+      - WORDPRESS_DB_NAME=$$config_wordpress_db_name
+      - WORDPRESS_CONFIG_EXTRA=$$config_wordpress_config_extra
+    ports:
+      - '80'
+variables:
+  - id: $$config_wordpress_db_host
+    name: WORDPRESS_DB_HOST
+    label: Database Host
+    defaultValue: ''
+    description: ''
+    placeholder: db.coollabs.io
+    required: true
+  - id: $$config_wordpress_db_port
+    name: WORDPRESS_DB_PORT
+    label: Database Port
+    defaultValue: ''
+    description: ''
+    placeholder: '3306'
+    required: true
+  - id: $$config_wordpress_db_user
+    name: WORDPRESS_DB_USER
+    label: Database User
+    defaultValue: ''
+    description: ''
+    placeholder: wordpress
+    required: true
+  - id: $$secret_wordpress_db_password
+    name: WORDPRESS_DB_PASSWORD
+    label: Database Password
+    defaultValue: ''
+    description: ''
+    placeholder: supers3cr3tpassw0rd!
+    required: true
+    showOnConfiguration: true
+  - id: $$config_wordpress_db_name
+    name: WORDPRESS_DB_NAME
+    label: Database Name
+    defaultValue: ''
+    description: ''
+    placeholder: wordpress
+    required: true
+  - id: $$config_wordpress_config_extra
+    name: WORDPRESS_CONFIG_EXTRA
+    label: Extra Config
+    defaultValue: ''
+    description: ''
+    type: textarea
+    placeholder: |
+      define('WP_DEBUG', true);
+      define('WP_DEBUG_LOG', true);
+      define('WP_DEBUG_DISPLAY', false);
+      @ini_set('display_errors', 0);

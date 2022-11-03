@@ -1,0 +1,14 @@
+templateVersion: 1.0.0
+defaultVersion: 1.9.2
+type: uptimekuma
+name: UptimeKuma
+services:
+  $$id:
+    image: louislam/uptime-kuma:$$core_version
+    environment: []
+    volumes:
+      - $$id-uptimekuma:/app/data
+    ports:
+      - '3001'
+variables: []
+documentation: https://hub.docker.com/r/louislam/uptime-kuma

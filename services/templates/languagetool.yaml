@@ -1,0 +1,14 @@
+templateVersion: 1.0.0
+defaultVersion: 5.8
+type: languagetool
+name: LanguageTool
+services:
+  $$id:
+    image: silviof/docker-languagetool:$$core_version
+    environment: []
+    volumes:
+      - $$id-ngrams:/ngrams
+    ports:
+      - '8010'
+variables: []
+documentation: https://hub.docker.com/r/silviof/docker-languagetool

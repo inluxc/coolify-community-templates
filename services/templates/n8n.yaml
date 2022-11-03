@@ -1,0 +1,25 @@
+templateVersion: 1.0.0
+defaultVersion: 0.198.1
+type: n8n
+name: n8n.io
+description: n8n is a free and open node based Workflow Automation Tool.
+services:
+  $$id:
+    name: N8n
+    documentation: Taken from https://hub.docker.com/r/n8nio/n8n
+    depends_on: []
+    image: n8nio/n8n:$$core_version
+    volumes:
+      - $$id-data:/root/.n8n
+      - $$id-data-write:/files
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WEBHOOK_URL=$$config_webhook_url
+    ports:
+      - '5678'
+variables:
+  - id: $$config_webhook_url
+    name: WEBHOOK_URL
+    label: Webhook URL
+    defaultValue: $$generate_fqdn
+    description: ''

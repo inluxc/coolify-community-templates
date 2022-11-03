@@ -1,0 +1,14 @@
+templateVersion: 1.0.0
+defaultVersion: 1.26.0
+type: vaultwarden
+name: VaultWarden
+services:
+  $$id:
+    image: vaultwarden/server:$$core_version
+    environment: []
+    volumes:
+      - $$id-data:/data
+    ports:
+      - '80'
+variables: []
+documentation: https://hub.docker.com/r/vaultwarden/server

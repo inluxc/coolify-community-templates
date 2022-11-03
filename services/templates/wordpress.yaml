@@ -1,0 +1,85 @@
+templateVersion: 1.0.0
+defaultVersion: php8.1
+type: wordpress
+name: WordPress (with MySQL)
+description: WordPress is a content management system based on PHP with new MySQL database.
+services:
+  $$id:
+    name: WordPress
+    documentation: ' Taken from https://docs.docker.com/compose/wordpress/'
+    depends_on:
+      - $$id-mysql
+    image: wordpress:$$core_version
+    volumes:
+      - $$id-wordpress-data:/var/www/html
+    environment:
+      - WORDPRESS_DB_HOST=$$config_wordpress_db_host
+      - WORDPRESS_DB_USER=$$config_mysql_user
+      - WORDPRESS_DB_PASSWORD=$$secret_mysql_password
+      - WORDPRESS_DB_NAME=$$config_mysql_database
+      - WORDPRESS_CONFIG_EXTRA=$$config_wordpress_config_extra
+    ports:
+      - '80'
+  $$id-mysql:
+    name: MySQL
+    depends_on: []
+    image: bitnami/mysql:5.7
+    imageArm: mysql:5.7
+    volumes:
+      - $$id-mysql-data:/bitnami/mysql/data
+    volumesArm:
+      - $$id-mysql-data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=$$secret_mysql_root_password
+      - MYSQL_ROOT_USER=$$config_mysql_root_user
+      - MYSQL_DATABASE=$$config_mysql_database
+      - MYSQL_USER=$$config_mysql_user
+      - MYSQL_PASSWORD=$$secret_mysql_password
+variables:
+  - id: $$config_wordpress_db_host
+    name: WORDPRESS_DB_HOST
+    label: Database Host
+    defaultValue: $$id-mysql
+    description: ''
+    readOnly: true
+  - id: $$config_wordpress_config_extra
+    name: WORDPRESS_CONFIG_EXTRA
+    label: WordPress Config Extra
+    defaultValue: ''
+    description: ''
+    type: textarea
+    placeholder: |
+      define('WP_DEBUG', true);
+      define('WP_DEBUG_LOG', true);
+      define('WP_DEBUG_DISPLAY', false);
+      @ini_set('display_errors', 0);
+  - id: $$secret_mysql_root_password
+    name: MYSQL_ROOT_PASSWORD
+    label: MySQL Root Password
+    defaultValue: $$generate_password
+    description: ''
+    readOnly: true
+  - id: $$config_mysql_root_user
+    name: MYSQL_ROOT_USER
+    label: MySQL Root User
+    defaultValue: $$generate_username
+    description: ''
+    readOnly: true
+  - id: $$config_mysql_database
+    name: MYSQL_DATABASE
+    label: MySQL Database
+    defaultValue: wordpress
+    description: ''
+    readOnly: true
+  - id: $$config_mysql_user
+    name: MYSQL_USER
+    label: MySQL User
+    defaultValue: $$generate_username
+    description: ''
+    readOnly: true
+  - id: $$secret_mysql_password
+    name: MYSQL_PASSWORD
+    label: MySQL Password
+    defaultValue: $$generate_password
+    description: ''
+    readOnly: true
