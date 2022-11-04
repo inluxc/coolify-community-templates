@@ -1,5 +1,6 @@
 templateVersion: 1.0.0
 defaultVersion: v0.29.1
+documentation: https://docs.meilisearch.com/learn/getting_started/quick_start.html
 type: meilisearch
 name: MeiliSearch
 description: >-

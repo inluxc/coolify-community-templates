@@ -1,5 +1,6 @@
 templateVersion: 1.0.0
 defaultVersion: 1.9.2
+documentation: https://hub.docker.com/r/louislam/uptime-kuma
 type: uptimekuma
 name: UptimeKuma
 services:
@@ -11,4 +12,3 @@ services:
     ports:
       - '3001'
 variables: []
-documentation: https://hub.docker.com/r/louislam/uptime-kuma

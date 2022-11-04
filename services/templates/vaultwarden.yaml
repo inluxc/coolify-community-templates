@@ -1,5 +1,6 @@
 templateVersion: 1.0.0
 defaultVersion: 1.26.0
+documentation: https://hub.docker.com/r/vaultwarden/server
 type: vaultwarden
 name: VaultWarden
 services:
@@ -11,4 +12,3 @@ services:
     ports:
       - '80'
 variables: []
-documentation: https://hub.docker.com/r/vaultwarden/server

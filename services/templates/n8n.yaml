@@ -1,5 +1,6 @@
 templateVersion: 1.0.0
 defaultVersion: 0.198.1
+documentation: https://docs.n8n.io
 type: n8n
 name: n8n.io
 description: n8n is a free and open node based Workflow Automation Tool.

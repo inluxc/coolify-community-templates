@@ -1,5 +1,6 @@
 templateVersion: 1.0.0
 defaultVersion: 9.2.3
+documentation: https://hub.docker.com/r/grafana/grafana
 type: grafana
 name: Grafana
 description: >-
@@ -15,4 +16,3 @@ services:
     ports:
       - '3000'
 variables: []
-documentation: https://hub.docker.com/r/grafana/grafana

@@ -1,7 +1,9 @@
 templateVersion: 1.0.0
 defaultVersion: php8.1
+documentation: https://wordpress.org/
 type: wordpress
-name: WordPress (with MySQL)
+name: WordPress
+subname: (with MySQL)
 description: WordPress is a content management system based on PHP with new MySQL database.
 services:
   $$id:

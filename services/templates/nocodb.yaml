@@ -1,5 +1,6 @@
 templateVersion: 1.0.0
 defaultVersion: 0.98.1
+documentation: https://docs.nocodb.com
 type: nocodb
 name: NocoDB
 description: >-
@@ -72,4 +73,3 @@ variables:
     label: NocoDB Disable Telemetry
     defaultValue: '1'
     description: Disable telemetry (Enter "1" to disable).
-documentation: See https://github.com/nocodb/nocodb

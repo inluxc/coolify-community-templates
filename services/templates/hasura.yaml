@@ -1,5 +1,6 @@
 templateVersion: 1.0.0
 defaultVersion: v2.13.0
+documentation: https://hasura.io/docs/latest/index/
 type: hasura
 name: Hasura
 description: Instant realtime GraphQL APIs on any Postgres application, existing or new.

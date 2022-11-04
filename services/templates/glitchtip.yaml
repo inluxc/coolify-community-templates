@@ -1,5 +1,6 @@
 templateVersion: 1.0.0
 defaultVersion: v2.0.6
+documentation: https://glitchtip.com/documentation
 type: glitchtip
 name: GlitchTip
 description: ''

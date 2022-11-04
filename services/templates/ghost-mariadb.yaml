@@ -1,7 +1,9 @@
 templateVersion: 1.0.0
 defaultVersion: latest
+documentation: https://ghost.org/resources/
 type: ghost-mariadb
-name: Ghost (MariaDB)
+name: Ghost
+subname: (MariaDB)
 description: >-
   Ghost is a free and open source blogging platform written in JavaScript and
   distributed under the MIT License

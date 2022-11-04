@@ -1,5 +1,6 @@
 templateVersion: 1.0.0
 defaultVersion: 4.7.1
+documentation: https://coder.com/docs/coder-oss/latest
 type: vscodeserver
 name: VSCode Server
 description: >-

@@ -1,5 +1,6 @@
 templateVersion: 1.0.0
 defaultVersion: 0.21.1
+documentation: https://fider.io/docs
 type: fider
 name: Fider
 description: Fider is a platform to collect and organize customer feedback.

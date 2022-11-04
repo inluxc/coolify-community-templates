@@ -1,5 +1,6 @@
 templateVersion: 1.0.0
 defaultVersion: 0.56.2
+documentation: https://hub.docker.com/r/zadam/trilium
 type: trilium
 name: Trilium Notes
 services:
@@ -11,4 +12,3 @@ services:
     ports:
       - '8080'
 variables: []
-documentation: https://hub.docker.com/r/zadam/trilium

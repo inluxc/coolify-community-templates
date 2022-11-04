@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Coolify.io Community Templates",
   "scripts": {
-    "services": "pnpm services:merge && pnpm services:tags && pnpm services:push",
+    "services": "pnpm services:split && pnpm services:validate && pnpm services:merge && pnpm services:tags && pnpm services:push",
+    "services:validate": "node --no-warnings services/scripts/validate.mjs",
     "services:split": "node --no-warnings services/scripts/split.mjs",
     "services:merge": "node --no-warnings services/scripts/merge.mjs",
     "services:tags": "node --no-warnings services/scripts/tags.mjs",
@@ -17,6 +18,7 @@
     "execa": "^6.1.0",
     "got": "^12.5.2",
     "js-yaml": "^4.1.0",
-    "octokit": "^2.0.10"
+    "octokit": "^2.0.10",
+    "zod": "^3.19.1"
   }
 }
