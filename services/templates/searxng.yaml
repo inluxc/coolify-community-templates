@@ -26,8 +26,7 @@ services:
       - SETUID
       - DAC_OVERRIDE
     files:
-      - source: $$workdir/settings.yml
-        destination: /etc/searxng/settings.yml
+      - location: /etc/searxng/settings.yml
         content: |2-
 
                                         # see https://docs.searxng.org/admin/engines/settings.html#use-default-settings

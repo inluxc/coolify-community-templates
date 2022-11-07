@@ -12,3 +12,6 @@ The following statements needs to be true:
 Service icons needs to manually add to [here](https://github.com/coollabsio/coolify/tree/main/apps/ui/static). 
 
 The icon name should be the same as the `type` field in the template.
+
+## Add new service
+See [contribution guide](CONTRIBUTION.md)

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Coolify.io Community Templates",
   "scripts": {
-    "services": "pnpm services:split && pnpm services:validate && pnpm services:merge && pnpm services:tags && pnpm services:push",
+    "services": "pnpm services:split && pnpm services:validate && pnpm services:merge && pnpm services:tags",
     "services:validate": "node --no-warnings services/scripts/validate.mjs",
     "services:split": "node --no-warnings services/scripts/split.mjs",
     "services:merge": "node --no-warnings services/scripts/merge.mjs",

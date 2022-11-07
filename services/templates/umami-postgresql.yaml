@@ -33,8 +33,7 @@ services:
       - POSTGRES_DB=$$config_postgres_db
     ports: []
     files:
-      - source: $$workdir/schema.postgresql.sql
-        destination: /docker-entrypoint-initdb.d/schema.postgresql.sql
+      - location: /docker-entrypoint-initdb.d/schema.postgresql.sql
         content: |2-
 
                                         -- CreateTable
