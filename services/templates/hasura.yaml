@@ -4,6 +4,9 @@ documentation: https://hasura.io/docs/latest/index/
 type: hasura
 name: Hasura
 description: Instant realtime GraphQL APIs on any Postgres application, existing or new.
+labels:
+  - graphql
+  - database
 services:
   $$id:
     name: Hasura

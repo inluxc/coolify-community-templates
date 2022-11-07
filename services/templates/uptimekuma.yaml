@@ -1,6 +1,9 @@
 templateVersion: 1.0.0
 defaultVersion: 1.9.2
 documentation: https://hub.docker.com/r/louislam/uptime-kuma
+description: A free & fancy self-hosted monitoring tool.
+labels:
+  - uptime
 type: uptimekuma
 name: UptimeKuma
 services:

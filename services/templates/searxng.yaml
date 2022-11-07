@@ -3,7 +3,9 @@ defaultVersion: 2022.10.14-1a5b0965
 documentation: https://docs.searxng.org/
 type: searxng
 name: SearXNG
-description: ''
+description: >-
+  Free internet metasearch engine which aggregates results from more than 70
+  search services.
 services:
   $$id:
     name: SearXNG

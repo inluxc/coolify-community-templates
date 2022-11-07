@@ -3,9 +3,10 @@ defaultVersion: 4.7.1
 documentation: https://coder.com/docs/coder-oss/latest
 type: vscodeserver
 name: VSCode Server
-description: >-
-  vscode-server by Coder is VS Code running on a remote server, accessible
-  through the browser.
+description: Visual Studio Code on a remote server, accessible through the browser.
+labels:
+  - vscode
+  - ide
 services:
   $$id:
     name: VSCode Server

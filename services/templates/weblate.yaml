@@ -1,9 +1,12 @@
 templateVersion: 1.0.0
 defaultVersion: latest
 documentation: https://docs.weblate.org/en/latest/admin/install/docker.html
+description: A copylefted libre software web-based continuous localization system.
 type: weblate
 name: Weblate
-description: ''
+labels:
+  - translate
+  - localization
 services:
   $$id:
     name: Weblate

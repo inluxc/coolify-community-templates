@@ -3,11 +3,8 @@ defaultVersion: postgresql-v1.38.0
 documentation: https://umami.is/docs/getting-started
 type: umami-postgresql
 name: Umami
-subname: (with PostgreSQL)
-description: >-
-  Umami is a simple, easy to use, self-hosted web analytics solution. The goal
-  is to provide you with a friendly privacy-focused alternative to Google
-  Analytics.
+subname: (PostgreSQL)
+description: A simple, easy to use, self-hosted web analytics solution.
 services:
   $$id:
     name: Umami

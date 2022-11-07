@@ -1,6 +1,14 @@
 templateVersion: 1.0.0
 defaultVersion: 0.56.2
 documentation: https://hub.docker.com/r/zadam/trilium
+description: >-
+  A hierarchical note taking application with focus on building large personal
+  knowledge bases.
+labels:
+  - personal
+  - knowledge
+  - notes
+  - wiki
 type: trilium
 name: Trilium Notes
 services:

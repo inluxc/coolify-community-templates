@@ -4,9 +4,7 @@ documentation: https://ghost.org/resources/
 type: ghost-only
 name: Ghost
 subname: (without Database)
-description: >-
-  Ghost is a free and open source blogging platform written in JavaScript and
-  distributed under the MIT License
+description: Free and open source blogging platform.
 services:
   $$id:
     name: Ghost

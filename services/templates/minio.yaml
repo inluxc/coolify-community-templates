@@ -3,7 +3,10 @@ defaultVersion: RELEASE.2022-10-15T19-57-03Z
 documentation: https://min.io/docs/minio
 type: minio
 name: MinIO
-description: ' MinIO is a cloud storage server compatible with Amazon S3'
+description: A cloud storage server compatible with Amazon S3.
+labels:
+  - storage
+  - s3
 services:
   $$id:
     name: MinIO

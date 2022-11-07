@@ -4,6 +4,11 @@ documentation: https://appwrite.io/docs
 type: appwrite
 name: Appwrite
 description: Secure Backend Server for Web, Mobile & Flutter Developers.
+labels:
+  - serverless
+  - backend
+  - storage
+  - api
 services:
   $$id:
     image: appwrite/appwrite:$$core_version

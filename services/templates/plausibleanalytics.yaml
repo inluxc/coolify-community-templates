@@ -3,7 +3,14 @@ defaultVersion: stable
 documentation: https://plausible.io/doc/
 type: plausibleanalytics
 name: Plausible Analytics
-description: Plausible is a lightweight and open-source website analytics tool.
+description: A lightweight and open-source website analytics tool.
+labels:
+  - analytics
+  - statistics
+  - plausible
+  - gdpr
+  - no-cookie
+  - google analytics
 services:
   $$id:
     name: Plausible Analytics

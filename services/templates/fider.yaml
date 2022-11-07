@@ -3,7 +3,10 @@ defaultVersion: 0.21.1
 documentation: https://fider.io/docs
 type: fider
 name: Fider
-description: Fider is a platform to collect and organize customer feedback.
+description: A platform to collect and organize customer feedback.
+labels:
+  - suggestion
+  - feedback
 services:
   $$id:
     name: Fider

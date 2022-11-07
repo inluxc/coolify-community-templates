@@ -1,6 +1,7 @@
 templateVersion: 1.0.0
-defaultVersion: 5.8
+defaultVersion: '5.8'
 documentation: https://hub.docker.com/r/silviof/docker-languagetool
+description: A multilingual grammar, style and spell checker.
 type: languagetool
 name: LanguageTool
 services:

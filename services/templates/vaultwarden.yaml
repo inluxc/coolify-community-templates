@@ -1,8 +1,12 @@
 templateVersion: 1.0.0
 defaultVersion: 1.26.0
 documentation: https://hub.docker.com/r/vaultwarden/server
+description: Bitwarden compatible server written in Rust.
 type: vaultwarden
 name: VaultWarden
+labels:
+  - bitwarden
+  - password manager
 services:
   $$id:
     image: vaultwarden/server:$$core_version

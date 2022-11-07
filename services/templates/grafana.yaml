@@ -3,9 +3,11 @@ defaultVersion: 9.2.3
 documentation: https://hub.docker.com/r/grafana/grafana
 type: grafana
 name: Grafana
-description: >-
-  Grafana allows you to query, visualize, alert on and understand your metrics
-  no matter where they are stored.
+description: Grafana allows you to query, visualize, alert on and understand your metrics.
+labels:
+  - monitoring
+  - metrics
+  - dashboard
 services:
   $$id:
     image: grafana/grafana:$$core_version

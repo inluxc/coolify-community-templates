@@ -3,10 +3,8 @@ defaultVersion: '5.22'
 documentation: https://ghost.org/resources/
 type: ghost-mysql
 name: Ghost
-subname: (with MySQL)
-description: >-
-  Ghost is a free and open source blogging platform written in JavaScript and
-  distributed under the MIT License
+subname: (MySQL)
+description: Ghost is a free and open source blogging platform.
 services:
   $$id:
     name: Ghost

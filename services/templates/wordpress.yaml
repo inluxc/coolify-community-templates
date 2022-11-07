@@ -3,8 +3,12 @@ defaultVersion: php8.1
 documentation: https://wordpress.org/
 type: wordpress
 name: WordPress
-subname: (with MySQL)
-description: WordPress is a content management system based on PHP with new MySQL database.
+subname: (MySQL)
+description: A content management system based on PHP.
+labels:
+  - wordpress
+  - php
+  - cms
 services:
   $$id:
     name: WordPress

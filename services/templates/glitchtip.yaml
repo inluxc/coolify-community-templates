@@ -3,7 +3,10 @@ defaultVersion: v2.0.6
 documentation: https://glitchtip.com/documentation
 type: glitchtip
 name: GlitchTip
-description: ''
+description: Simple, open source error tracking.
+labels:
+  - sentry
+  - bugsnag
 services:
   $$id:
     name: GlitchTip

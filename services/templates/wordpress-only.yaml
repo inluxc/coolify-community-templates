@@ -4,7 +4,11 @@ documentation: https://wordpress.org/
 type: wordpress-only
 name: WordPress
 subname: (without DB)
-description: WordPress is a content management system based on PHP without MySQL.
+description: A content management system based on PHP.
+labels:
+  - wordpress
+  - php
+  - cms
 services:
   $$id:
     name: WordPress

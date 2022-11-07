@@ -4,8 +4,12 @@ documentation: https://docs.nocodb.com
 type: nocodb
 name: NocoDB
 description: >-
-  The Open Source Airtable Alternative - Turns any MySQL, PostgreSQL, SQL
-  Server, SQLite & MariaDB into a smart-spreadsheet.
+  Turns any MySQL, PostgreSQL, SQL Server, SQLite & MariaDB into a
+  smart-spreadsheet.
+labels:
+  - database
+  - airtable
+  - spreadsheet
 services:
   $$id:
     name: NocoDB
@@ -36,7 +40,7 @@ variables:
     name: PORT
     label: Port
     defaultValue: '8080'
-    description: "\tFor setting app running port."
+    description: ''
   - id: $$secret_database_url
     name: DATABASE_URL
     label: Database URL

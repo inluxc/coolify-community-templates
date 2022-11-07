@@ -3,6 +3,7 @@ defaultVersion: v1.8.6
 documentation: https://docs.appsmith.com/getting-started/setup/instance-configuration/
 type: appsmith
 name: Appsmith
+description: Fastest way to build internal apps over any database or API.
 services:
   $$id:
     image: appsmith/appsmith-ce:$$core_version

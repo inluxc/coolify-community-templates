@@ -3,9 +3,7 @@ defaultVersion: v0.29.1
 documentation: https://docs.meilisearch.com/learn/getting_started/quick_start.html
 type: meilisearch
 name: MeiliSearch
-description: >-
-  MeiliSearch is a lightning Fast, Ultra Relevant, and Typo-Tolerant Search
-  Engine
+description: A lightning Fast, Ultra Relevant, and Typo-Tolerant Search Engine.
 services:
   $$id:
     name: MeiliSearch
