@@ -1,0 +1,63 @@
+templateVersion: 1.0.0
+defaultVersion: "latest"
+documentation: https://github.com/freyacodes/Lavalink
+description: Standalone audio sending node based on Lavaplayer.
+type: lavalink
+name: Lavalink
+labels:
+  - discord
+  - discord bot
+  - audio
+  - lavalink
+services:
+  $$id:
+    name: Lavalink
+    image: fredboat/lavalink:$$core_version
+    environment: []
+    volumes:
+      - $$id-lavalink:/lavalink
+    ports:
+      - "2333"
+    files:
+      - location: /opt/Lavalink/application.yml
+        content: >-
+          server:
+            port: $$config_port
+            address: 0.0.0.0
+          lavalink
+            server:
+              password: $$secret_password
+              sources:
+                youtube: true
+                bandcamp: true
+                soundcloud: true
+                twitch: true
+                vimeo: true
+                http: true
+                local: false
+
+          logging:
+            file:
+              path: ./logs/
+
+            level:
+              root: INFO
+              lavalink: INFO
+
+            logback:
+              rollingpolicy:
+                max-file-size: 1GB
+                max-history: 30
+    
+variables:
+  - id: $$config_port
+    name: PORT
+    label: Port
+    default_value: '2333'
+    required: true
+
+  - id: $$secret_password
+    name: PASSWORD
+    label: Password
+    default_value: $$generate_password
+    required: true
