@@ -2,7 +2,7 @@ templateVersion: 1.0.0
 defaultVersion: "latest"
 documentation: https://github.com/freyacodes/Lavalink
 description: Standalone audio sending node based on Lavaplayer.
-type: lavalink
+type: jda
 name: Lavalink
 labels:
   - discord
