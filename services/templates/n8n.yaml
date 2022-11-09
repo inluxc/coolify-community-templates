@@ -13,7 +13,6 @@ labels:
 services:
   $$id:
     name: N8n
-    documentation: Taken from https://hub.docker.com/r/n8nio/n8n
     depends_on: []
     image: n8nio/n8n:$$core_version
     volumes:

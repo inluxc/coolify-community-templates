@@ -12,7 +12,6 @@ labels:
 services:
   $$id:
     name: WordPress
-    documentation: Taken from https://docs.docker.com/compose/wordpress/
     image: wordpress:$$core_version
     volumes:
       - $$id-wordpress-data:/var/www/html

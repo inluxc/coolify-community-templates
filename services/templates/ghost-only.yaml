@@ -1,6 +1,6 @@
 templateVersion: 1.0.0
 defaultVersion: '5.22'
-documentation: https://ghost.org/resources/
+documentation: https://docs.ghost.org
 type: ghost-only
 name: Ghost
 subname: (without Database)
@@ -8,7 +8,6 @@ description: Free and open source blogging platform.
 services:
   $$id:
     name: Ghost
-    documentation: Taken from https://docs.ghost.org/
     image: ghost:$$core_version
     volumes:
       - $$id-ghost:/var/lib/ghost/content

@@ -10,7 +10,6 @@ labels:
 services:
   $$id:
     name: VSCode Server
-    documentation: 'Taken from https://github.com/coder/code-server/. '
     depends_on: []
     image: codercom/code-server:$$core_version
     volumes:

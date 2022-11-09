@@ -1,7 +1,7 @@
 templateVersion: 1.0.0
 ignore: true
 defaultVersion: latest
-documentation: https://ghost.org/resources/
+documentation: https://docs.ghost.org
 type: ghost-mariadb
 name: Ghost
 subname: (MariaDB)
@@ -12,7 +12,6 @@ labels:
 services:
   $$id:
     name: Ghost
-    documentation: Taken from https://docs.ghost.org/
     depends_on:
       - $$id-mariadb
     image: bitnami/ghost:$$core_version

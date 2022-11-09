@@ -11,7 +11,6 @@ services:
   $$id:
     name: MinIO
     command: server /data --console-address :9001
-    documentation: Taken from https://docs.min.io/docs/minio-docker-quickstart-guide.html
     depends_on: []
     image: minio/minio:$$core_version
     volumes:

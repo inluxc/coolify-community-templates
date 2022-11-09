@@ -12,7 +12,6 @@ labels:
 services:
   $$id:
     name: WordPress
-    documentation: ' Taken from https://docs.docker.com/compose/wordpress/'
     depends_on:
       - $$id-mysql
     image: wordpress:$$core_version

@@ -14,7 +14,6 @@ labels:
 services:
   $$id:
     name: Plausible Analytics
-    documentation: Taken from https://plausible.io/
     command: >-
       sh -c "sleep 10 && /entrypoint.sh db createdb && /entrypoint.sh db migrate
       && /entrypoint.sh db init-admin && /entrypoint.sh run"
@@ -36,7 +35,6 @@ services:
       - '8000'
   $$id-postgresql:
     name: PostgreSQL
-    documentation: Taken from https://plausible.io/
     image: bitnami/postgresql:13.2.0
     volumes:
       - $$id-postgresql-data:/bitnami/postgresql
@@ -46,7 +44,6 @@ services:
       - POSTGRESQL_DATABASE=$$config_postgresql_database
   $$id-clickhouse:
     name: Clickhouse
-    documentation: Taken from https://plausible.io/
     volumes:
       - $$id-clickhouse-data:/var/lib/clickhouse
     image: yandex/clickhouse-server:21.3.2.5

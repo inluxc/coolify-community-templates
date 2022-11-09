@@ -1,6 +1,6 @@
 templateVersion: 1.0.0
 defaultVersion: '5.22'
-documentation: https://ghost.org/resources/
+documentation: https://docs.ghost.org
 type: ghost-mysql
 name: Ghost
 subname: (MySQL)
@@ -8,7 +8,6 @@ description: Ghost is a free and open source blogging platform.
 services:
   $$id:
     name: Ghost
-    documentation: Taken from https://docs.ghost.org/
     depends_on:
       - $$id-mysql
     image: ghost:$$core_version
