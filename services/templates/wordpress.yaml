@@ -29,7 +29,7 @@ services:
     name: MySQL
     depends_on: []
     image: bitnami/mysql:5.7
-    imageArm: mysql:5.7
+    imageArm: mysql:8.0
     volumes:
       - $$id-mysql-data:/bitnami/mysql/data
     volumesArm:
