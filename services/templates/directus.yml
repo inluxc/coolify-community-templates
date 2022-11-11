@@ -1,0 +1,85 @@
+templateVersion: 1.0.0
+defaultVersion: v2.13.0
+documentation: https://docs.directus.io/getting-started/introduction.html
+type: directus
+name: Directus
+description: Directus is an Open Data Platform built to democratize the database.
+labels:
+  - api
+  - database
+services:
+  $$id:
+    name: Directus
+    depends_on:
+      - $$id-postgresql
+      - $$id-cache
+    image: directus/directus:$$core_version
+    volumes:
+      - $$id-data-uploads:/directus/uploads
+    environment:
+      - KEY: '255d861b-5ea1-5996-9aa3-922530ec40b1'
+      - SECRET: '6116487b-cda1-52c2-b5b5-c8022c45e263'
+      - DB_CLIENT: 'pg'
+      - DB_HOST: 'database'
+      - DB_PORT: '5432'
+      - DB_DATABASE: 'directus'
+      - DB_USER: 'directus'
+      - DB_PASSWORD: 'directus'
+      - CACHE_ENABLED: 'true'
+      - CACHE_STORE: 'redis'
+      - CACHE_REDIS: 'redis://cache:6379'
+      - ADMIN_EMAIL: 'admin@example.com'
+      - ADMIN_PASSWORD: 'd1r3ctu5'
+    ports:
+      - '8055'
+      
+  $$id-postgresql:
+    name: PostgreSQL
+    depends_on: []
+    image: postgres:12-alpine
+    volumes:
+      - $$id-postgresql-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=$$config_postgres_user
+      - POSTGRES_PASSWORD=$$secret_postgres_password
+      - POSTGRES_DB=$$config_postgres_db
+    ports: []
+
+  $$id-cache:
+    name: Cache
+    depends_on: []
+    image: redis:6
+    
+variables:
+  - id: $$config_hasura_graphql_enable_console
+    name: HASURA_GRAPHQL_ENABLE_CONSOLE
+    label: Enable Hasura Console
+    defaultValue: 'true'
+    description: ''
+  - id: $$secret_hasura_graphql_metadata_database_url
+    name: HASURA_GRAPHQL_METADATA_DATABASE_URL
+    label: Hasura Metadata Database URL
+    defaultValue: >-
+      postgresql://$$config_postgres_user:$$secret_postgres_password@$$id-postgresql:5432/$$config_postgres_db
+    description: ''
+  - id: $$secret_hasura_graphql_admin_password
+    name: HASURA_GRAPHQL_ADMIN_PASSWORD
+    label: Hasura Admin Password
+    defaultValue: $$generate_password
+    description: ''
+    showOnConfiguration: true
+  - id: $$config_postgres_user
+    name: POSTGRES_USER
+    label: PostgreSQL User
+    defaultValue: $$generate_username
+    description: ''
+  - id: $$secret_postgres_password
+    name: POSTGRES_PASSWORD
+    label: PostgreSQL Password
+    defaultValue: $$generate_password
+    description: ''
+  - id: $$config_postgres_db
+    name: POSTGRES_DB
+    label: PostgreSQL Database
+    defaultValue: directus
+    description: ''
